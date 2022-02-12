@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
-    # path('', views.<VIEW NAME>.as_view(), name='<VIEW NAME>'),
+    path('', include('expense_tracker.urls')),
+    path('', include('users.urls')),
 ]
