@@ -1,0 +1,1 @@
+web: gunicorn expense_tracker_django.wsgi

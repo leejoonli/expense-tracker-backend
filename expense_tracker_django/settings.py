@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'expense_tracker',
     'rest_framework',
     'rest_framework.authtoken',
+    'django_filters',
     'corsheaders',
     'djoser',
     'users',
@@ -132,6 +133,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         # What we'll use for our API
         'rest_framework.authentication.TokenAuthentication',
@@ -144,7 +146,7 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
 }
 
 AUTH_USER_MODEL='users.User'
@@ -157,3 +159,5 @@ DJOSER = {
         'user': 'users.serializers.UserCreateSerializer'
     }
 }
+
+STATIC_ROOT=os.path.join(BASE_DIR, "static/")
