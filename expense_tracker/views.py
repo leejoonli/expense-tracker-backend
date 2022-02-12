@@ -12,6 +12,14 @@ class ExpenseList(generics.ListCreateAPIView):
     # overwrite create method
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+    
+    # def get_queryset(self):
+    #     """
+    #     This view should return a list of all the purchases
+    #     for the currently authenticated user.
+    #     """
+    #     user = self.request.user
+    #     return Expense.objects.filter(owner=user)
 
 class ExpenseDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Expense.objects.all()
