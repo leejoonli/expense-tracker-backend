@@ -15,7 +15,7 @@ class ExpenseList(generics.ListCreateAPIView):
     
     def get_queryset(self):
         """
-        This view should return a list of all the purchases
+        This view should return a list of all the expenses
         for the currently authenticated user.
         """
         user = self.request.user
