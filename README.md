@@ -87,3 +87,11 @@ class User
     email
     avatar
 ```
+
+## Unsolved Problems
+
+No query parameter functionality is currently implemented.  And I can forsee problems with pagination once a user's amount of data gets large enough.  Hopefully, adding more detail to the expense tracker model won't have any migration problems.
+
+## Major Hurdles
+
+The biggest hurdle regarding the backend would be using the Django Rest Framework.  There's so much involved when it comes to the Django Rest Framework that it felt overwhelming at times, but I was also very interested in what else the package provides.  The next step would be to add query parameters and possibly add pagination depending on the amount of data.  Thankfully, the markdowns provided were very well documented and I was able to follow step by step to create the database with Django and PostgreSQL.
