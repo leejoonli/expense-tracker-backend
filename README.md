@@ -57,6 +57,11 @@ https://salty-eyrie-01871.herokuapp.com/
 
 \* Note: You will not have any data if you run locally since you haven't posted any data.  It is recommended you don't run things locally and use the database hosted by Heroku and use the endpoints provided above.
 
+## Current Application State
+
+### API route: /expeses/
+![image](https://media.git.generalassemb.ly/user/40293/files/7385b980-9080-11ec-9d77-d985afd04bf9)
+
 ## Future Improvments
 
 - More data to the expense model.
